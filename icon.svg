@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <radialGradient id="ocean" cx="35%" cy="28%" r="78%">
+      <stop offset="0" stop-color="#48d8ed"/>
+      <stop offset="0.55" stop-color="#197ba6"/>
+      <stop offset="1" stop-color="#102d50"/>
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="#0b1420"/>
+  <circle cx="32" cy="32" r="22" fill="url(#ocean)" stroke="#8deaf2" stroke-width="1.5"/>
+  <ellipse cx="32" cy="32" rx="10" ry="22" fill="none" stroke="#b8f6f1" stroke-opacity=".65"/>
+  <ellipse cx="32" cy="32" rx="22" ry="8" fill="none" stroke="#b8f6f1" stroke-opacity=".65"/>
+  <path d="M10 32h44M32 10v44" stroke="#b8f6f1" stroke-opacity=".35"/>
+  <path d="M19 20l6-4 7 3 2 6-6 4-2 8-5-3-3-7zM39 38l7-4 5 4-2 8-6 3-4-5z" fill="#9ce6b0"/>
+  <circle cx="48" cy="17" r="4" fill="#ffd479" stroke="#0b1420" stroke-width="2"/>
+</svg>

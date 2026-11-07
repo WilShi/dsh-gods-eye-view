@@ -1,0 +1,74 @@
+{
+  "name": "@wilshi/dsh-gods-eye-view",
+  "version": "1.0.0",
+  "description": "Embed the full God’s Eye View in DeepSeek Harness with DSH agent control, process management and China/international map modes.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=24.14.0 <25 || >=26 <27"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "gods-eye-view",
+    "cesium",
+    "gis",
+    "osint",
+    "maps",
+    "spatial-intelligence"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilshi/dsh-gods-eye-view.git"
+  },
+  "homepage": "https://github.com/wilshi/dsh-gods-eye-view#readme",
+  "bugs": {
+    "url": "https://github.com/wilshi/dsh-gods-eye-view/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "upstream.js",
+    "view.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "scripts/install-upstream.mjs",
+    "patches/*.js",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "UPSTREAM-LICENSE.md",
+    "docs/images/*.png",
+    "test/*.mjs"
+  ],
+  "scripts": {
+    "setup": "node scripts/install-upstream.mjs",
+    "postinstall": "node scripts/install-upstream.mjs",
+    "test": "node --test test/*.test.mjs",
+    "check": "node --check index.js && node --check upstream.js && node --check view.js && node --check client.js && node --check scripts/install-upstream.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  }
+}
