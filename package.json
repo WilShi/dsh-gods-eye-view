@@ -1,6 +1,6 @@
 {
   "name": "@wilshi/dsh-gods-eye-view",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Embed the full God’s Eye View in DeepSeek Harness with DSH agent control, process management and China/international map modes.",
   "license": "MIT",
   "type": "module",
@@ -48,6 +48,7 @@
     "LICENSE",
     "THIRD_PARTY_NOTICES.md",
     "UPSTREAM-LICENSE.md",
+    "screenshots.json",
     "docs/images/*.png",
     "test/*.mjs"
   ],
